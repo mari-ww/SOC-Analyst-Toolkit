@@ -1,0 +1,70 @@
+[
+    {
+      "rule_id": "T1566",
+      "description": "Phishing detectado via abertura de email suspeito",
+      "severity": "medium",
+      "conditions": {
+        "event_type": "EmailOpened",
+        "details.subject": ["Urgent", "Invoice", "Suspicious"],
+        "details.message": ["attachment", "unknown@external.com"]
+      }
+    },
+    {
+      "rule_id": "T1059",
+      "description": "Execução de PowerShell suspeita",
+      "severity": "high",
+      "conditions": {
+        "event_type": "ProcessCreation",
+        "details.process_name": "powershell.exe",
+        "details.command_line": ["-enc", "-nop"]
+      }
+    },
+    {
+      "rule_id": "T1068",
+      "description": "Escalonamento de privilégios via SeDebugPrivilege",
+      "severity": "high",
+      "conditions": {
+        "event_type": "PrivilegeEscalation",
+        "details.privileges": ["SeDebugPrivilege", "SeTakeOwnershipPrivilege"]
+      }
+    },
+    {
+      "rule_id": "T1078",
+      "description": "Acesso root via SSH de IP externo",
+      "severity": "high",
+      "conditions": {
+        "event_type": "sshd",
+        "details.message": "Accepted password for root",
+        "details.user": "root"
+      }
+    },
+    {
+      "rule_id": "T1021",
+      "description": "Lateral Movement via RDP (porta 3389)",
+      "severity": "medium",
+      "conditions": {
+        "event_type": "connection",
+        "details.dest_port": 3389,
+        "details.action": "ALLOW"
+      }
+    },
+    {
+      "rule_id": "T1105",
+      "description": "Transferência de dados suspeita detectada",
+      "severity": "medium",
+      "conditions": {
+        "event_type": "connection",
+        "details.note": "Large outbound transfer"
+      }
+    },
+    {
+      "rule_id": "T1219",
+      "description": "Comunicação com IP malicioso detectada (Meterpreter)",
+      "severity": "high",
+      "conditions": {
+        "event_type": "alert",
+        "alert.signature": "Meterpreter Reverse Shell"
+      }
+    }
+  ]
+  

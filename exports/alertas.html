@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Alertas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #1e1e2f;
+            color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #f75c5c;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #2a2a40;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+            word-wrap: break-word;
+        }
+        th {
+            background-color: #444;
+            color: #f75c5c;
+        }
+        tr:nth-child(even) {
+            background-color: #303048;
+        }
+        .message {
+            font-family: 'Courier New', monospace;
+            color: #ccc;
+        }
+        .timestamp {
+            color: #ccc;
+        }
+        .high {
+            color: #ff5c5c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relatório de Alertas de Segurança</h1>
+    <p>Gerado em: 2025-04-11 16:18</p>
+
+    <table>
+        <tr>
+            <th>Data/Hora</th>
+            <th>Evento</th>
+            <th>Severidade</th>
+            <th>MITRE ID</th>
+            <th>Descrição</th>
+            <th>Mensagem</th>
+        </tr>
+        
+        <tr class="high">
+            <td>2025-04-11T09:02:33</td>
+            <td>sshd</td>
+            <td class="high">High</td>
+            <td>T1078</td>
+            <td>Acesso root via SSH de IP externo</td>
+            <td class="message">
+                <pre>Accepted password for root from 203.0.113.50 port 55210 ssh2</pre>
+            </td>
+        </tr>
+        
+        <tr class="high">
+            <td>2025-04-11T08:17:41</td>
+            <td>ProcessCreation</td>
+            <td class="high">High</td>
+            <td>T1059</td>
+            <td>ExecuÃ§Ã£o de PowerShell suspeita</td>
+            <td class="message">
+                <pre></pre>
+            </td>
+        </tr>
+        
+    </table>
+    <button onclick="downloadHTML()" style="
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    ">
+    💾 Baixar Relatório
+    </button>
+
+    <script>
+    function downloadHTML() {
+        const html = document.documentElement.outerHTML;
+        const blob = new Blob([html], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'relatorio_alertas.html';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+      "timestamp": "2025-04-11T10:11:01",
+      "source_ip": "203.0.113.50",
+      "destination_ip": "192.168.1.20",
+      "port": 3389,
+      "protocol": "TCP",
+      "action": "ALLOW"
+    },
+    {
+      "timestamp": "2025-04-11T10:12:47",
+      "source_ip": "203.0.113.50",
+      "destination_ip": "192.168.1.22",
+      "port": 3389,
+      "protocol": "TCP",
+      "action": "ALLOW"
+    },
+    {
+      "timestamp": "2025-04-11T08:04:52",
+      "source_type": "firewall",
+      "event_type": "connection",
+      "details": {
+        "action": "ALLOW",
+        "src_ip": "10.0.0.23",
+        "dest_ip": "198.51.100.34",
+        "dest_port": 443,
+        "protocol": "TCP",
+        "note": "Large outbound transfer detected"
+      }
+    }
+  ]
+  

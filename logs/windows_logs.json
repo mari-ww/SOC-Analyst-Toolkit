@@ -1,0 +1,54 @@
+[
+    {
+      "event_id": 4624,
+      "timestamp": "2025-04-11T08:15:23",
+      "user": "ANALYST-PC\\jose",
+      "logon_type": 10,
+      "source_ip": "192.168.1.105",
+      "event_type": "Logon",
+      "status": "Success"
+    },
+    {
+      "event_id": 4688,
+      "timestamp": "2025-04-11T08:17:41",
+      "parent_process": "explorer.exe",
+      "process_name": "powershell.exe",
+      "command_line": "powershell -nop -w hidden -enc ...",
+      "event_type": "ProcessCreation"
+    },
+    {
+      "timestamp": "2025-04-11T08:00:12",
+      "source_type": "windows",
+      "event_type": "EmailOpened",
+      "details": {
+        "event_id": 4104,
+        "process_name": "outlook.exe",
+        "user": "jdoe",
+        "subject": "Urgent: Invoice Attached",
+        "message": "User jdoe opened an attachment from unknown@external.com"
+      }
+    },
+    {
+      "timestamp": "2025-04-11T08:01:03",
+      "source_type": "windows",
+      "event_type": "ProcessCreation",
+      "details": {
+        "event_id": 4688,
+        "process_name": "powershell.exe",
+        "parent_process": "outlook.exe",
+        "command_line": "powershell -w hidden -enc aGVsbG8gd29ybGQ=",
+        "user": "jdoe"
+      }
+    },
+    {
+      "timestamp": "2025-04-11T08:01:30",
+      "source_type": "windows",
+      "event_type": "PrivilegeEscalation",
+      "details": {
+        "event_id": 4672,
+        "privileges": "SeDebugPrivilege, SeTakeOwnershipPrivilege",
+        "user": "jdoe"
+      }
+    }
+  ]
+  

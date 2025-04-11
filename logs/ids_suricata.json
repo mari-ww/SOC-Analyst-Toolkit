@@ -1,0 +1,14 @@
+[
+    {
+      "timestamp": "2025-04-11T11:22:33",
+      "alert": {
+        "signature": "ET TROJAN Possible Meterpreter Reverse Shell",
+        "severity": 1
+      },
+      "src_ip": "203.0.113.50",
+      "dest_ip": "192.168.1.100",
+      "protocol": "TCP",
+      "dest_port": 4444
+    }
+  ]
+  

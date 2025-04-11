@@ -1,0 +1,116 @@
+[
+  {
+    "timestamp": "2025-04-11T10:11:01",
+    "source_type": "firewall",
+    "event_type": "firewall_connection",
+    "source_ip": "203.0.113.50",
+    "destination_ip": "192.168.1.20",
+    "user": "",
+    "details": {
+      "timestamp": "2025-04-11T10:11:01",
+      "source_ip": "203.0.113.50",
+      "destination_ip": "192.168.1.20",
+      "port": 3389,
+      "protocol": "TCP",
+      "action": "ALLOW"
+    }
+  },
+  {
+    "timestamp": "2025-04-11T10:12:47",
+    "source_type": "firewall",
+    "event_type": "firewall_connection",
+    "source_ip": "203.0.113.50",
+    "destination_ip": "192.168.1.22",
+    "user": "",
+    "details": {
+      "timestamp": "2025-04-11T10:12:47",
+      "source_ip": "203.0.113.50",
+      "destination_ip": "192.168.1.22",
+      "port": 3389,
+      "protocol": "TCP",
+      "action": "ALLOW"
+    }
+  },
+  {
+    "timestamp": "2025-04-11T11:22:33",
+    "source_type": "ids",
+    "event_type": "ET TROJAN Possible Meterpreter Reverse Shell",
+    "source_ip": "203.0.113.50",
+    "destination_ip": "192.168.1.100",
+    "user": "",
+    "details": {
+      "timestamp": "2025-04-11T11:22:33",
+      "alert": {
+        "signature": "ET TROJAN Possible Meterpreter Reverse Shell",
+        "severity": 1
+      },
+      "src_ip": "203.0.113.50",
+      "dest_ip": "192.168.1.100",
+      "protocol": "TCP",
+      "dest_port": 4444
+    }
+  },
+  {
+    "timestamp": "2025-04-11T09:02:33",
+    "source_type": "linux",
+    "event_type": "sshd",
+    "source_ip": "203.0.113.50",
+    "destination_ip": "",
+    "user": "root",
+    "details": {
+      "timestamp": "2025-04-11T09:02:33",
+      "host": "ubuntu-vm",
+      "process": "sshd",
+      "message": "Accepted password for root from 203.0.113.50 port 55210 ssh2",
+      "level": "info"
+    }
+  },
+  {
+    "timestamp": "2025-04-11T09:05:44",
+    "source_type": "linux",
+    "event_type": "sudo",
+    "source_ip": "",
+    "destination_ip": "",
+    "user": "root",
+    "details": {
+      "timestamp": "2025-04-11T09:05:44",
+      "host": "ubuntu-vm",
+      "process": "sudo",
+      "message": "root : TTY=pts/1 ; PWD=/home/root ; USER=root ; COMMAND=/bin/bash",
+      "level": "notice"
+    }
+  },
+  {
+    "timestamp": "2025-04-11T08:15:23",
+    "source_type": "windows",
+    "event_type": "Logon",
+    "source_ip": "192.168.1.105",
+    "destination_ip": "",
+    "user": "ANALYST-PC\\jose",
+    "details": {
+      "event_id": 4624,
+      "timestamp": "2025-04-11T08:15:23",
+      "user": "ANALYST-PC\\jose",
+      "logon_type": 10,
+      "source_ip": "192.168.1.105",
+      "event_type": "Logon",
+      "status": "Success"
+    }
+  },
+  {
+    "timestamp": "2025-04-11T08:17:41",
+    "source_type": "windows",
+    "event_type": "ProcessCreation",
+    "source_ip": "",
+    "destination_ip": "",
+    "user": "",
+    "details": {
+      "event_id": 4688,
+      "timestamp": "2025-04-11T08:17:41",
+      "parent_process": "explorer.exe",
+      "process_name": "powershell.exe",
+      "command_line": "powershell -nop -w hidden -enc ...",
+      "event_type": "ProcessCreation"
+    }
+  }
+]

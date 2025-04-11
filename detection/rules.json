@@ -1,0 +1,31 @@
+[
+    {
+      "id": "T1059",
+      "name": "Execução de PowerShell suspeita",
+      "severity": "high",
+      "match": {
+        "event_type": "ProcessCreation",
+        "details.command_line": "powershell"
+      }
+    },
+    {
+      "id": "T1021",
+      "name": "Logon remoto via RDP",
+      "severity": "medium",
+      "match": {
+        "event_type": "firewall_connection",
+        "destination_port": 3389
+      }
+    },
+    {
+      "id": "T1078",
+      "name": "Acesso root via SSH de IP externo",
+      "severity": "high",
+      "match": {
+        "source_type": "linux",
+        "user": "root",
+        "source_ip": "EXTERNAL"
+      }
+    }
+  ]
+  

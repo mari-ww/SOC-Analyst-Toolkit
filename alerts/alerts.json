@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2025-04-11T09:02:33",
+    "event_type": "sshd",
+    "rule_id": "T1078",
+    "description": "Acesso root via SSH de IP externo",
+    "severity": "high",
+    "log": {
+      "timestamp": "2025-04-11T09:02:33",
+      "source_type": "linux",
+      "event_type": "sshd",
+      "source_ip": "203.0.113.50",
+      "destination_ip": "",
+      "user": "root",
+      "details": {
+        "timestamp": "2025-04-11T09:02:33",
+        "host": "ubuntu-vm",
+        "process": "sshd",
+        "message": "Accepted password for root from 203.0.113.50 port 55210 ssh2",
+        "level": "info"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-11T08:17:41",
+    "event_type": "ProcessCreation",
+    "rule_id": "T1059",
+    "description": "Execu\u00c3\u00a7\u00c3\u00a3o de PowerShell suspeita",
+    "severity": "high",
+    "log": {
+      "timestamp": "2025-04-11T08:17:41",
+      "source_type": "windows",
+      "event_type": "ProcessCreation",
+      "source_ip": "",
+      "destination_ip": "",
+      "user": "",
+      "details": {
+        "event_id": 4688,
+        "timestamp": "2025-04-11T08:17:41",
+        "parent_process": "explorer.exe",
+        "process_name": "powershell.exe",
+        "command_line": "powershell -nop -w hidden -enc ...",
+        "event_type": "ProcessCreation"
+      }
+    }
+  }
+]
